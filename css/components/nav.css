@@ -1,0 +1,29 @@
+.nav {
+  width: 100%;
+}
+
+.nav__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: minmax(auto, 60px);
+      grid-template-rows: minmax(auto, 60px);
+}
+
+/* keyframe animation  */
+/* 
+
+@keyframes open{
+    0%{
+        transform: scale(0);
+        height: 0%;
+    }
+    100%{
+         transform: scale(1);
+        height: 100%;
+    }
+}
+
+*/
+/*# sourceMappingURL=nav.css.map */

@@ -1,0 +1,223 @@
+.btn {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s  ease-in;
+  transition: all 0.3s  ease-in;
+}
+
+.btn--default {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1rem;
+}
+
+.btn--active {
+  background-color: var(--color--btn-active);
+  -webkit-transition: all 0.2s linear ease-in-out;
+  transition: all 0.2s linear ease-in-out;
+}
+
+.btn--active .btn__text {
+  color: var(--blue);
+  -webkit-animation: fade-in 0.5s ease-in-out;
+          animation: fade-in 0.5s ease-in-out;
+  -webkit-transition: -webkit-animation 0.7s ease-in-out;
+  transition: -webkit-animation 0.7s ease-in-out;
+  transition: animation 0.7s ease-in-out;
+  transition: animation 0.7s ease-in-out, -webkit-animation 0.7s ease-in-out;
+}
+
+.select-card {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+.select-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../assets/img/svg/star.svg");
+  -webkit-transition: all 0.7s linear ease-in-out;
+  transition: all 0.7s linear ease-in-out;
+}
+
+.select--active .select-icon {
+  background-image: url("../assets/img/svg/star-active.svg");
+  -webkit-animation: fade-in-out 1s forwards;
+          animation: fade-in-out 1s forwards;
+}
+
+.active > a > span span:first-child {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+/* preloader */
+.preloader {
+  min-height: 320px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loading {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.loading div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--blue) transparent transparent transparent;
+}
+
+.loading div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.loading div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.loading div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+.preloader--active {
+  display: block !important;
+}
+
+.preloader--active .preloader {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  top: 0;
+  left: 0;
+  -webkit-transform: none;
+          transform: none;
+}
+
+/* keyframes */
+@-webkit-keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fade-in-out {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fade-in-out {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=elements.css.map */
