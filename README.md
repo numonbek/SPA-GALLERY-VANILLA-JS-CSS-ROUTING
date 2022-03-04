@@ -10,5 +10,5 @@
 ## - Save LocaleStorage;
 ## - Modal Window Custom;
 ## - Custom Cursor;
-# -  Get Coordinates and move blocks;
+## -  Get Coordinates and move blocks;
 
